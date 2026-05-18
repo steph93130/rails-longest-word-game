@@ -1,0 +1,36 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="w-50 text-center">
+
+    <h1 class="mb-4">Word</h1>
+    <h5>Quel est votre mot ?</h5>
+
+    <div class="visu d-flex justify-content-center gap-2 my-4">
+      <% @grid.chars.each do |letter| %>
+        <p class="card p-3"><%= letter %></p>
+      <% end %>
+    </div>
+
+    <form action="/answer" method="get" data-turbo="false">
+      <input type="hidden" name="grid" value="<%= @grid %>">
+      <input type="hidden" name="start_time" value="<%= @time %>">
+
+      <div class="mb-3">
+        <label for="mot" class="form-label d-block">
+          Votre mot
+        </label>
+
+        <input
+          type="text"
+          id="mot"
+          name="mot"
+          class="form-control text-center">
+      </div>
+
+      <input
+        type="submit"
+        value="Ask!"
+        class="btn btn-primary">
+    </form>
+
+  </div>
+</div>

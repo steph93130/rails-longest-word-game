@@ -8,3 +8,14 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ body {
+  background-color: #202020;
+  color: white;
+ }
+
+ .visu {
+  padding: 25px;
+  background-color: #101010;
+  border-radius: 15px;
+ }

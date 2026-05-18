@@ -1,0 +1,26 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="w-50 text-center">
+
+    <h1 class="mb-4">Word</h1>
+    <h5>Quel est votre mot ?</h5>
+
+    <div class="visu mb-4">
+
+      <% if @is_english_word && @is_in_grid %>
+
+        <h2><%= @word %></h2>
+        <h2><%= @count %> lettres</h2>
+        <h2>en <%= @duration %> secondes</h2>
+
+      <% else %>
+
+        <h2>Le mot est incorrect</h2>
+
+      <% end %>
+
+    </div>
+
+  <a href="/word" class="btn btn-danger">Try again</a>
+
+  </div>
+</div>
